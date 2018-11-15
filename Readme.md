@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Program.cs](./CS/XPOConsoleApplication/Program.cs) (VB: [Program.vb](./VB/XPOConsoleApplication/Program.vb))
+<!-- default file list end -->
 # How to create collection properties with associations at runtime
 
 
