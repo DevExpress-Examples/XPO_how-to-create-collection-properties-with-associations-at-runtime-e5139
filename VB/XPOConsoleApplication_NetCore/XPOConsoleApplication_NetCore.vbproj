@@ -12,6 +12,6 @@
     <Compile Include="..\XPOConsoleApplication - VB\Program.vb" Link="Program.vb" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Xpo" Version="19.2.11" />
+    <PackageReference Include="DevExpress.Xpo" Version="19.2.12" />
   </ItemGroup>
 </Project>
