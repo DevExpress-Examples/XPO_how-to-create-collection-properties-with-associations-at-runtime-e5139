@@ -1,4 +1,6 @@
-Imports System
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Text
 Imports DevExpress.Xpo
 Imports DevExpress.Xpo.DB
 Imports DevExpress.Data.Filtering
@@ -49,12 +51,12 @@ Namespace XPOConsoleApplication
             Using session As UnitOfWork = New UnitOfWork()
                 Dim g1 As Group = session.FindObject(Of Group)(CriteriaOperator.Parse("Title='Flying'"))
                 Dim groupItems As XPCollection = CType(g1.GetMemberValue("Items"), XPCollection)
-                System.Diagnostics.Debug.Assert(groupItems.Count = 2)
+                System.Diagnostics.Debug.Assert(groupItems.Count Is 2)
                 Dim s1 As Supplier = session.FindObject(Of Supplier)(CriteriaOperator.Parse("CompanyName='Acme'"))
                 Dim acmeProducts As XPCollection = CType(s1.GetMemberValue("Products"), XPCollection)
-                System.Diagnostics.Debug.Assert(acmeProducts.Count = 2)
+                System.Diagnostics.Debug.Assert(acmeProducts.Count Is 2)
                 Dim p3 As Product = session.FindObject(Of Product)(CriteriaOperator.Parse("Name='Saucer'"))
-                System.Diagnostics.Debug.Assert(Equals(CType(miSupplier.GetValue(CObj(p3)), Supplier).CompanyName, "Zorq"))
+                System.Diagnostics.Debug.Assert(Equals(CType(miSupplier.GetValue(p3), Supplier).CompanyName, "Zorq"))
             End Using
         End Sub
     End Class
@@ -72,7 +74,7 @@ Namespace XPOConsoleApplication
             End Get
 
             Set(ByVal value As String)
-                SetPropertyValue("CompanyName", value)
+                SetPropertyValue(Of String)("CompanyName", value)
             End Set
         End Property
 
@@ -82,7 +84,7 @@ Namespace XPOConsoleApplication
             End Get
 
             Set(ByVal value As String)
-                SetPropertyValue("Address", value)
+                SetPropertyValue(Of String)("Address", value)
             End Set
         End Property
     End Class
@@ -100,7 +102,7 @@ Namespace XPOConsoleApplication
             End Get
 
             Set(ByVal value As String)
-                SetPropertyValue("Name", value)
+                SetPropertyValue(Of String)("Name", value)
             End Set
         End Property
 
@@ -110,7 +112,7 @@ Namespace XPOConsoleApplication
             End Get
 
             Set(ByVal value As Integer)
-                SetPropertyValue("Quantity", value)
+                SetPropertyValue(Of Integer)("Quantity", value)
             End Set
         End Property
     End Class
@@ -128,7 +130,7 @@ Namespace XPOConsoleApplication
             End Get
 
             Set(ByVal value As String)
-                SetPropertyValue("Title", value)
+                SetPropertyValue(Of String)("Title", value)
             End Set
         End Property
     End Class
