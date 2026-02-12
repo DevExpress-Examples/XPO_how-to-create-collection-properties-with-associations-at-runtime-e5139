@@ -20,7 +20,7 @@ XAF-specifics: <a href="https://www.devexpress.com/Support/Center/p/E250">How to
 
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=XPO_how-to-create-collection-properties-with-associations-at-runtime-e5139&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=XPO_how-to-create-collection-properties-with-associations-at-runtime-e5139&~~~was_helpful=no)
 
